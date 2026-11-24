@@ -1,0 +1,1166 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Shalom B&amp;B &amp; Self Catering Apts · Carlingford (concept)</title>
+<meta name="description" content="Concept redesign: a family-run B&amp;B and three one-bedroom self-catering apartments on the shores of Carlingford Lough, Co. Louth.">
+<meta name="theme-color" content="#1f3b3a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f3b3a'/%3E%3Ccircle cx='32' cy='30' r='9' fill='%23f2b89a'/%3E%3Cpath d='M6 46l14-14 10 9 10-12 18 17z' fill='%23fbf8f2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/poster.webp" fetchpriority="high">
+<style>
+html,body{background:#fbf8f2;color:#22303a}
+:root{
+  --white:#fbf8f2; --mist:#eef2ee; --mist-2:#e3ebe7;
+  --lough:#2f6a62; --lough-deep:#1f3b3a; --lough-ink:#17302f;
+  --slate:#4a5866; --ink:#22303a; --ink-70:rgba(34,48,58,.76); --ink-50:rgba(34,48,58,.56);
+  --peach:#f2b89a; --peach-deep:#d9825c; --gold:#e0a43c; --gold-deep:#a8711a;
+  --rule:rgba(34,48,58,.14); --rule-l:rgba(251,248,242,.22);
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Figtree","Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --col:min(1200px,100% - 2*clamp(16px,4vw,48px));
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip;-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:76px}
+body{font:400 17px/1.65 var(--sans);overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:rgba(242,184,154,.55)}
+:focus-visible{outline:2.5px solid var(--gold-deep);outline-offset:3px;border-radius:6px}
+.wrap{width:var(--col);margin-inline:auto}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+html:not(.js) .js-only{display:none!important}
+.js .no-js-only{display:none!important}
+
+/* type */
+.eyebrow{font:600 12.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--lough)}
+.eyebrow.on-dark{color:var(--peach)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;line-height:1.02}
+h2{font-size:clamp(38px,5.2vw,72px);margin-top:18px}
+h2 em,h1 em{font-style:italic}
+.lede{font-size:clamp(17px,1.4vw,20px);color:var(--ink-70);max-width:36rem;margin-top:20px}
+.fine{font-size:13.5px;color:var(--ink-50)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:999px;font:600 15px/1 var(--sans);letter-spacing:.01em;text-decoration:none;transition:transform .2s var(--ease),background-color .25s,color .25s,box-shadow .25s;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:active{transform:scale(.97)}
+.btn--lough{background:var(--lough-deep);color:var(--white)}
+.btn--lough:hover{background:var(--lough)}
+.btn--peach{background:var(--peach);color:var(--lough-ink)}
+.btn--peach:hover{background:#f6c9b0}
+.btn--line{box-shadow:inset 0 0 0 1.5px currentColor}
+.btn--line:hover{background:var(--lough-deep);color:var(--white);box-shadow:inset 0 0 0 1.5px var(--lough-deep)}
+.btn--ghost-l{color:var(--white);box-shadow:inset 0 0 0 1.5px var(--rule-l)}
+.btn--ghost-l:hover{background:rgba(251,248,242,.12)}
+
+/* progress + ribbon + header */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--peach),var(--gold));z-index:60}
+.ribbon{background:var(--lough-ink);color:rgba(251,248,242,.88);font:500 13px/1.35 var(--sans);text-align:center;padding:8px 16px}
+.hdr{position:sticky;top:0;z-index:50;background:rgba(251,248,242,.86);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--rule)}
+.hdr .wrap{display:flex;align-items:center;gap:24px;height:64px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;flex:none}
+.brand b{font:500 28px/1 var(--serif);letter-spacing:-.01em;color:var(--lough-deep)}
+.brand span{font:600 11px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-50)}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{font:500 14.5px/1 var(--sans);text-decoration:none;padding:10px 12px;border-radius:999px;color:var(--ink-70);transition:background-color .2s,color .2s}
+.nav a:hover{background:var(--mist-2);color:var(--ink)}
+.hdr .btn{min-height:42px;padding:0 18px;font-size:14px}
+@media (max-width:1080px){.nav{display:none}.hdr .btn{margin-left:auto}}
+@media (max-width:520px){.brand span{display:none}.hdr .wrap{height:58px}}
+
+/* HERO / 3D stage */
+.hero{position:relative;background:#cdb9a4 url(assets/poster.webp) 50% 60%/cover no-repeat}
+.no-scrub .hero{height:auto}
+.stage{position:sticky;top:64px;height:calc(100vh - 64px);height:calc(100svh - 64px);min-height:520px;max-height:1100px;overflow:hidden;isolation:isolate}
+@media (max-width:520px){.stage{top:58px;height:calc(100svh - 58px)}}
+.no-scrub .stage{position:relative}
+.stage .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:46% 50%;z-index:0}
+.stage .tint{position:absolute;inset:0;z-index:1;pointer-events:none;mix-blend-mode:soft-light;opacity:.0;transition:background-color .3s}
+.stage canvas{position:absolute;inset:0;width:100%!important;height:100%!important;z-index:2;opacity:0;transition:opacity 1.1s var(--ease);touch-action:pan-y;cursor:grab}
+.stage canvas.ready{opacity:1}
+.stage canvas:active{cursor:grabbing}
+.scrim{position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(60% 46% at 50% 18%,rgba(251,248,242,.6),rgba(251,248,242,0) 70%)}
+.hero-copy{position:absolute;z-index:5;left:50%;transform:translateX(-50%);top:clamp(28px,6vh,72px);width:min(1000px,calc(100% - 32px));text-align:center}
+.hero-copy-in{transition:opacity .2s linear}
+.hero-copy .kicker{display:inline-flex;align-items:center;gap:10px;font:italic 400 18px/1.2 var(--serif);color:var(--lough-deep);background:rgba(251,248,242,.7);padding:8px 14px 8px 10px;border-radius:999px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.hero-copy .kicker i{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#fff3e4,var(--peach) 55%,var(--peach-deep));box-shadow:0 0 18px rgba(242,184,154,.9)}
+.hero h1{font-size:clamp(48px,6.6vw,104px);line-height:.95;letter-spacing:-.03em;color:var(--lough-ink);margin-top:18px}
+.hero h1 .l{display:block}
+.hero h1 em{color:var(--lough)}
+.hero-sub{margin:18px auto 0;font-size:clamp(16px,1.3vw,19px);line-height:1.55;color:var(--ink);max-width:36rem;text-shadow:0 1px 14px rgba(251,248,242,.9)}
+.hero-cta{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+.pin{position:absolute;z-index:4;left:0;top:0;pointer-events:none;font:600 11.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--lough-ink);white-space:nowrap;opacity:0;transition:opacity .6s}
+.pin.on{opacity:1}
+.pin span{display:inline-block;background:rgba(251,248,242,.82);padding:7px 10px;border-radius:999px;transform:translate(-50%,-140%);box-shadow:0 6px 18px rgba(23,48,47,.12)}
+.pin::after{content:"";position:absolute;left:0;top:0;width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:var(--lough-ink);box-shadow:0 0 0 4px rgba(251,248,242,.7)}
+.pin.house span{background:var(--lough-deep);color:var(--white)}
+.dial{position:absolute;z-index:6;left:50%;bottom:clamp(18px,4vh,40px);transform:translateX(-50%);width:min(520px,calc(100% - 32px));background:rgba(251,248,242,.8);-webkit-backdrop-filter:saturate(1.3) blur(16px);backdrop-filter:saturate(1.3) blur(16px);border:1px solid rgba(255,255,255,.7);border-radius:22px;padding:16px 20px 14px;box-shadow:0 18px 50px rgba(23,48,47,.16)}
+.dial-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.dial-top b{font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--lough)}
+.dial-top .phase{font:italic 500 20px/1 var(--serif);color:var(--lough-ink)}
+.range{-webkit-appearance:none;appearance:none;width:100%;height:44px;background:transparent;margin:6px 0 2px;cursor:pointer}
+.range::-webkit-slider-runnable-track{height:8px;border-radius:99px;background:linear-gradient(90deg,#f2b89a,#f6e7d6 35%,#eaf2ee 50%,#f3dca8 68%,#e0a43c)}
+.range::-moz-range-track{height:8px;border-radius:99px;background:linear-gradient(90deg,#f2b89a,#f6e7d6 35%,#eaf2ee 50%,#f3dca8 68%,#e0a43c)}
+.range::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-11px;border-radius:50%;background:radial-gradient(circle at 40% 38%,#fffaf0,#f7c98c 60%,#e0a43c);border:3px solid #fff;box-shadow:0 0 0 1px rgba(23,48,47,.15),0 0 24px rgba(240,170,80,.8)}
+.range::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:radial-gradient(circle at 40% 38%,#fffaf0,#f7c98c 60%,#e0a43c);border:3px solid #fff;box-shadow:0 0 24px rgba(240,170,80,.8)}
+.range:focus-visible{outline:none}
+.range:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(--gold-deep),0 0 24px rgba(240,170,80,.8)}
+.dial-ends{display:flex;justify-content:space-between;font:500 12.5px/1.2 var(--sans);color:var(--ink-70)}
+.dial-ends button{padding:6px 0;text-align:left}
+.dial-ends button:last-child{text-align:right}
+.dial-ends button:hover{color:var(--ink)}
+.dial-note{margin-top:8px;font:400 14.5px/1.45 var(--sans);color:var(--ink);min-height:2.9em}
+.hint{position:absolute;z-index:6;right:clamp(16px,4vw,48px);top:clamp(20px,4vh,36px);font:500 12px/1.3 var(--sans);color:var(--lough-ink);background:rgba(251,248,242,.7);padding:8px 12px;border-radius:999px}
+.illus-tag{position:absolute;z-index:6;left:clamp(16px,4vw,48px);bottom:clamp(18px,4vh,40px);font:500 11.5px/1.3 var(--sans);letter-spacing:.06em;color:var(--lough-ink);opacity:.8;max-width:150px}
+@media (max-width:860px){
+  .scrim{background:linear-gradient(180deg,rgba(251,248,242,.7) 0%,rgba(251,248,242,.35) 34%,rgba(251,248,242,0) 52%)}
+  .hero-copy{top:22px}
+  .hero-copy .kicker{font-size:15px}
+  .hero h1{margin-top:12px;font-size:clamp(42px,12vw,64px)}
+  .hero-sub{font-size:15.5px;margin-top:12px;max-width:22rem}
+  .hero-cta{margin-top:16px}
+  .hero-cta .btn{min-height:46px;font-size:14.5px}
+  .hero-cta .hc-call{display:none}
+  .hint,.illus-tag{display:none}
+  .pin{font-size:10px}
+  .pin.mob-hide{display:none}
+  .dial{padding:10px 14px 8px;border-radius:18px;bottom:calc(env(safe-area-inset-bottom) + 136px)}
+  .dial-note{display:none}
+  .chapters{padding:0 16px}
+  .chap{margin-left:auto;margin-right:auto}
+  .dial-note{font-size:13px;min-height:0}
+}
+@media (max-width:520px){.hero-sub{display:none}}
+
+/* scroll chapters over the pinned stage */
+.chapters{position:relative;z-index:8;width:var(--col);margin:0 auto;padding-bottom:30vh;pointer-events:none}
+.chap{pointer-events:auto;width:min(350px,100%);margin:0 0 45vh auto;background:rgba(251,248,242,.86);-webkit-backdrop-filter:saturate(1.3) blur(16px);backdrop-filter:saturate(1.3) blur(16px);border:1px solid rgba(255,255,255,.75);border-radius:22px;padding:24px 26px;box-shadow:0 20px 60px rgba(23,48,47,.18)}
+.chap:first-child{margin-top:12vh}
+.chap .when{font:600 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--peach-deep)}
+.chap.eve .when{color:var(--gold-deep)}
+.chap.mid .when{color:var(--lough)}
+.chap h2{font-size:clamp(28px,2.6vw,38px);margin-top:10px;color:var(--lough-ink)}
+.chap p{margin-top:10px;color:var(--ink-70);font-size:16px}
+.no-scrub .chapters,html:not(.js) .chapters{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:40px 0}
+.no-scrub .chap,html:not(.js) .chap{margin:0;width:auto}
+@media (max-width:860px){.chap{margin-bottom:60vh;padding:18px 20px}.chap:first-child{margin-top:0}.chap p{font-size:15px}.no-scrub .chapters,html:not(.js) .chapters{grid-template-columns:1fr;padding:24px 16px}}
+
+/* sections */
+section.blk{padding:clamp(84px,10vw,140px) 0;position:relative}
+.alt{background:var(--mist)}
+.dark{background:var(--lough-deep);color:var(--white)}
+.dark .lede{color:rgba(251,248,242,.78)}
+.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+
+/* intro */
+.intro-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,6vw,96px);align-items:center}
+.quote{font:400 clamp(30px,3.6vw,52px)/1.12 var(--serif);letter-spacing:-.015em;color:var(--lough-ink);margin-top:18px}
+.quote em{color:var(--lough)}
+.quote-src{margin-top:18px;font-size:14px;color:var(--ink-50)}
+.peace{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:var(--lough-deep)}
+.peace img{width:100%;height:100%;object-fit:cover}
+.peace .word{position:absolute;inset:auto 0 0 0;padding:28px;background:linear-gradient(0deg,rgba(23,48,47,.85),rgba(23,48,47,0));color:var(--white)}
+.peace .word b{display:block;font:italic 400 clamp(54px,6vw,88px)/1 var(--serif);letter-spacing:-.02em}
+.peace .word span{font-size:15px;opacity:.85}
+.peace .tag{position:absolute;top:14px;left:14px;font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;background:rgba(251,248,242,.85);color:var(--lough-ink);padding:7px 10px;border-radius:99px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(56px,7vw,96px);border-top:1px solid var(--rule)}
+.facts div{padding:26px 22px 4px 0}
+.facts div+div{padding-left:22px;border-left:1px solid var(--rule)}
+.facts b{display:block;font:400 clamp(40px,4.4vw,64px)/1 var(--serif);letter-spacing:-.02em;color:var(--lough-deep)}
+.facts b small{font-size:.42em;letter-spacing:0;margin-left:4px;color:var(--lough)}
+.facts span{display:block;margin-top:10px;font-size:15px;color:var(--ink-70)}
+.listed{margin-top:28px;font-size:13px;color:var(--ink-50)}
+@media (max-width:900px){.intro-grid{grid-template-columns:1fr}.peace{aspect-ratio:16/11}.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(3){padding-left:0;border-left:0}.facts div:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+/* explorer */
+.tabs{display:inline-flex;padding:5px;border-radius:999px;background:rgba(251,248,242,.1);border:1px solid var(--rule-l);margin-top:36px}
+.tabs button{min-height:46px;padding:0 22px;border-radius:999px;font:600 15px/1 var(--sans);color:rgba(251,248,242,.8);transition:background-color .25s,color .25s}
+.tabs button[aria-selected="true"]{background:var(--peach);color:var(--lough-ink)}
+.tabs button:hover:not([aria-selected="true"]){color:#fff;background:rgba(251,248,242,.08)}
+.panel{margin-top:40px}
+.js .panel[hidden]{display:none}
+.panel-title{font:italic 400 28px/1.1 var(--serif);margin-bottom:22px;color:var(--peach)}
+.js .panel-title{display:none}
+.rooms{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:20px}
+.room{border-radius:var(--r);background:rgba(251,248,242,.06);border:1px solid var(--rule-l);padding:26px;display:flex;flex-direction:column;gap:12px}
+.room.photo{padding:0;overflow:hidden;position:relative;min-height:300px}
+.room.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.room.photo figcaption{position:absolute;left:12px;bottom:12px;font:600 11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;background:rgba(23,48,47,.7);padding:7px 10px;border-radius:99px}
+.room h3{font-size:34px;color:var(--white)}
+.room .chip{align-self:flex-start;font:600 11.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--peach);border:1px solid rgba(242,184,154,.4);padding:7px 10px;border-radius:99px}
+.room p{color:rgba(251,248,242,.78);font-size:16px}
+.room .btn{margin-top:auto;align-self:flex-start}
+.apt{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(28px,4vw,56px);align-items:start}
+.apt-svg{border-radius:var(--r);overflow:hidden;background:#264846;border:1px solid var(--rule-l)}
+.apt-svg svg{display:block;width:100%;height:auto}
+.apt-svg .cap{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;font-size:12.5px;color:rgba(251,248,242,.66);border-top:1px solid var(--rule-l)}
+.hot{cursor:pointer}
+.hot .hl{fill:none;stroke:var(--peach);stroke-width:3;opacity:0;transition:opacity .25s}
+.hot.on .hl,.hot:hover .hl{opacity:1}
+.spots{display:grid;gap:10px}
+.spot{display:flex;align-items:flex-start;gap:14px;text-align:left;padding:16px 18px;border-radius:16px;border:1px solid var(--rule-l);background:rgba(251,248,242,.04);transition:background-color .25s,border-color .25s,transform .2s var(--ease)}
+.spot:hover{background:rgba(251,248,242,.08)}
+.spot:active{transform:scale(.99)}
+.spot[aria-pressed="true"]{background:rgba(242,184,154,.14);border-color:rgba(242,184,154,.6)}
+.spot .n{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:700 13px/1 var(--sans);background:rgba(251,248,242,.12);color:var(--peach)}
+.spot[aria-pressed="true"] .n{background:var(--peach);color:var(--lough-ink)}
+.spot b{display:block;font:500 17px/1.3 var(--sans);color:var(--white)}
+.spot span{display:block;margin-top:4px;font-size:15px;color:rgba(251,248,242,.74);line-height:1.5}
+.apt-foot{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+@media (max-width:980px){.rooms{grid-template-columns:1fr 1fr}.room.photo{grid-column:1/-1;min-height:240px}.apt{grid-template-columns:1fr}}
+@media (max-width:560px){.rooms{grid-template-columns:1fr}.tabs{display:flex}.tabs button{flex:1;padding:0 10px;font-size:14px}}
+
+/* two suns */
+.suns{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+.sun-card{position:relative;border-radius:24px;overflow:hidden;min-height:420px;color:var(--white);display:flex;flex-direction:column;justify-content:flex-end;padding:30px;isolation:isolate}
+.sun-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.2s var(--ease)}
+.sun-card:hover img{transform:scale(1.04)}
+.sun-card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(23,48,47,.92) 0%,rgba(23,48,47,.6) 50%,rgba(23,48,47,.05) 85%)}
+.sun-card .when{font:600 12px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--peach)}
+.sun-card.eve .when{color:#f3c56f}
+.sun-card h3{font-size:clamp(32px,3.4vw,48px);margin-top:12px}
+.sun-card p{margin-top:10px;color:rgba(251,248,242,.85);max-width:28rem}
+.sun-card .btn{margin-top:20px;align-self:flex-start}
+.sun-card .cp{position:absolute;top:16px;right:16px;font:600 10.5px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;background:rgba(23,48,47,.6);padding:7px 10px;border-radius:99px}
+@media (max-width:820px){.suns{grid-template-columns:1fr}.sun-card{min-height:360px}}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(120px,13vw,190px);gap:14px;margin-top:44px}
+.gal button{position:relative;border-radius:16px;overflow:hidden;background:var(--mist-2);padding:0}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.gal button:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:10px;bottom:10px;font:600 11px/1 var(--sans);letter-spacing:.06em;color:var(--white);background:rgba(23,48,47,.68);padding:7px 10px;border-radius:99px;text-align:left}
+.gal .g1{grid-column:span 4;grid-row:span 2}
+.gal .g2{grid-column:span 2;grid-row:span 2}
+.gal .g3{grid-column:span 2;grid-row:span 2}
+.gal .g4{grid-column:span 2;grid-row:span 2}
+.gal .g5{grid-column:span 2;grid-row:span 2}
+.gal .zoom{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(251,248,242,.85);color:var(--lough-ink);opacity:0;transform:scale(.8);transition:opacity .25s,transform .25s var(--ease)}
+.gal button:hover .zoom,.gal button:focus-visible .zoom{opacity:1;transform:none}
+@media (max-width:760px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}.gal .g1{grid-column:1/-1;grid-row:span 2}.gal .g2,.gal .g3,.gal .g4,.gal .g5{grid-column:span 1;grid-row:span 1}.gal .zoom{opacity:1;transform:none}}
+.lb{position:fixed;inset:0;z-index:90;background:rgba(15,28,28,.94);display:none;align-items:center;justify-content:center;padding:56px 16px 90px}
+.lb.open{display:flex}
+.lb img{max-width:min(1200px,100%);max-height:100%;width:auto;height:auto;border-radius:10px;user-select:none;-webkit-user-drag:none}
+.lb .lb-cap{position:absolute;left:0;right:0;bottom:24px;text-align:center;color:rgba(251,248,242,.88);font-size:14.5px;padding:0 70px}
+.lb .lb-btn{position:absolute;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:rgba(251,248,242,.12);color:#fff;transition:background-color .2s}
+.lb .lb-btn:hover{background:rgba(251,248,242,.24)}
+.lb .lb-x{top:14px;right:14px}
+.lb .lb-p{left:14px;top:50%;transform:translateY(-50%)}
+.lb .lb-n{right:14px;top:50%;transform:translateY(-50%)}
+@media (max-width:640px){.lb{padding-bottom:130px}.lb .lb-p,.lb .lb-n{top:auto;bottom:16px;transform:none}.lb .lb-cap{bottom:82px;padding:0 16px}}
+
+/* getting here */
+.here-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);margin-top:48px;align-items:start}
+.walk{position:relative;border-radius:24px;background:var(--white);border:1px solid var(--rule);padding:30px}
+.walk h3{font:600 12.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--lough)}
+.track{position:relative;margin:34px 0 8px;padding-left:34px}
+.track::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:2px;background:repeating-linear-gradient(180deg,var(--lough) 0 6px,transparent 6px 12px)}
+.stop{position:relative;padding:0 0 26px}
+.stop:last-child{padding-bottom:0}
+.stop::before{content:"";position:absolute;left:-30px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--white);border:3px solid var(--lough)}
+.stop.home::before{background:var(--lough-deep);border-color:var(--lough-deep)}
+.stop b{display:block;font:500 19px/1.3 var(--sans)}
+.stop .t{display:inline-flex;align-items:baseline;gap:6px;margin-top:6px;font:400 15px/1 var(--sans);color:var(--ink-70)}
+.stop .t strong{font:400 34px/1 var(--serif);color:var(--lough-deep)}
+.walker{position:absolute;left:5px;top:0;width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(224,164,60,.25)}
+.js .walk.in .walker{animation:walk 5s var(--ease) infinite}
+@keyframes walk{0%{top:6px;opacity:0}10%{opacity:1}85%{opacity:1}100%{top:calc(100% - 14px);opacity:0}}
+.walk .fine{margin-top:20px}
+.far{margin-top:20px;border-radius:24px;background:var(--lough-deep);color:var(--white);padding:26px 30px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.far svg{width:80px;height:auto}
+.far p{font:400 clamp(22px,2vw,28px)/1.25 var(--serif)}
+.far p span{display:block;margin-top:6px;font:400 14px/1.4 var(--sans);color:rgba(251,248,242,.7)}
+.map{border-radius:24px;overflow:hidden;background:#dfe7e2;border:1px solid var(--rule);aspect-ratio:4/3.4;position:relative}
+.map-face{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;gap:14px;padding:26px;background:
+ radial-gradient(circle at 46% 44%,rgba(47,106,98,.0) 0 7px,transparent 8px),
+ linear-gradient(160deg,#dbe6df,#c9d9d1)}
+.map-face svg.mapart{position:absolute;inset:0;width:100%;height:100%}
+.map-face .addr{position:relative;background:rgba(251,248,242,.92);border-radius:18px;padding:18px 20px}
+.map-face .addr b{display:block;font:500 22px/1.2 var(--serif);color:var(--lough-ink)}
+.map-face .addr span{display:block;margin-top:4px;font-size:15px;color:var(--ink-70)}
+.map-face .row{position:relative;display:flex;flex-wrap:wrap;gap:10px}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (max-width:900px){.here-grid{grid-template-columns:1fr}.map{aspect-ratio:4/4.4}}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,96px);align-items:start}
+.faq details{border-top:1px solid var(--rule)}
+.faq details:last-child{border-bottom:1px solid var(--rule)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;cursor:pointer;font:500 clamp(18px,1.6vw,21px)/1.35 var(--sans)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--rule);position:relative;transition:transform .3s var(--ease),background-color .25s}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%)}
+.faq summary i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq details[open] summary i{transform:rotate(45deg);background:var(--peach);border-color:var(--peach)}
+.faq summary:hover{color:var(--lough)}
+.faq .a{padding:0 50px 24px 0;color:var(--ink-70)}
+@media (max-width:900px){.faq-grid{grid-template-columns:1fr}}
+
+/* helper */
+.helper{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,72px);align-items:start}
+.card{background:var(--white);color:var(--ink);border-radius:28px;padding:clamp(22px,3vw,36px);box-shadow:0 30px 80px rgba(0,0,0,.25)}
+.steps{display:flex;gap:6px;margin-bottom:22px}
+.steps span{flex:1;height:5px;border-radius:9px;background:var(--mist-2);transition:background-color .3s}
+.steps span.on{background:var(--lough)}
+.q{font:500 clamp(24px,2.4vw,32px)/1.15 var(--serif);color:var(--lough-ink)}
+.q small{display:block;font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--lough);margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.chip-b{min-height:48px;padding:0 18px;border-radius:14px;border:1.5px solid var(--rule);font:500 15.5px/1.2 var(--sans);text-align:left;background:#fff;transition:border-color .2s,background-color .2s,transform .15s var(--ease)}
+.chip-b:hover{border-color:var(--lough)}
+.chip-b:active{transform:scale(.97)}
+.chip-b[aria-pressed="true"]{background:var(--lough-deep);border-color:var(--lough-deep);color:var(--white)}
+.chip-b.big{flex:1 1 220px;min-height:84px;padding:16px 18px;display:flex;flex-direction:column;justify-content:center;gap:4px}
+.chip-b.big b{font:500 22px/1.1 var(--serif)}
+.chip-b.big span{font-size:13.5px;color:var(--ink-50)}
+.chip-b.big[aria-pressed="true"] span{color:rgba(251,248,242,.75)}
+.sub-chips{margin-top:14px}
+.sub-chips .lbl{font-size:14px;color:var(--ink-70)}
+.nav-row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:26px}
+.nav-row .btn[disabled]{opacity:.38;pointer-events:none}
+.txt-btn{font:600 14.5px/1 var(--sans);color:var(--ink-70);padding:12px 4px}
+.txt-btn:hover{color:var(--ink)}
+.msg{margin-top:18px;border-radius:16px;background:var(--mist);border:1px solid var(--rule);padding:16px 18px;font:400 14.5px/1.6 ui-monospace,"SF Mono",Menlo,monospace;white-space:pre-wrap;color:var(--ink);max-height:260px;overflow:auto}
+.msg .to{display:block;font:600 12px/1.4 var(--sans);letter-spacing:.06em;color:var(--ink-50);margin-bottom:8px;white-space:normal}
+.res-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.privacy{margin-top:14px;font-size:13px;color:var(--ink-50)}
+.step[hidden]{display:none}
+.helper-nojs{display:grid;gap:12px}
+@media (max-width:900px){.helper{grid-template-columns:1fr}}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.cbox{border-radius:22px;border:1px solid var(--rule-l);background:rgba(251,248,242,.05);padding:24px;display:flex;flex-direction:column;gap:14px}
+.cbox .k{font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--peach)}
+.cbox a.v,.cbox .v{font:400 clamp(21px,1.9vw,26px)/1.25 var(--serif);text-decoration:none;color:var(--white);overflow-wrap:anywhere}
+.cbox a.v:hover{text-decoration:underline;text-underline-offset:4px}
+.cbox .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.cbox .btn{min-height:44px;padding:0 16px;font-size:14px}
+.copy[data-done="1"]{background:var(--peach);color:var(--lough-ink);box-shadow:none}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+
+footer{background:var(--lough-ink);color:rgba(251,248,242,.74);padding:56px 0 48px;font-size:14px}
+footer .wrap{display:grid;gap:16px}
+footer .fb{font:500 30px/1 var(--serif);color:var(--white)}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+footer nav a{text-decoration:none}
+footer nav a:hover{color:#fff}
+footer hr{border:0;border-top:1px solid var(--rule-l)}
+
+/* mobile contact bar */
+.mbar{position:fixed;z-index:70;left:10px;right:10px;bottom:max(10px,env(safe-area-inset-bottom));display:none;grid-template-columns:1.2fr 1fr 1.2fr;gap:6px;padding:6px;border-radius:20px;background:rgba(23,48,47,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 14px 40px rgba(0,0,0,.28)}
+.mbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:14px;color:var(--white);font:600 14.5px/1 var(--sans);text-decoration:none}
+.mbar a:active{transform:scale(.97)}
+.mbar a.pri{background:var(--peach);color:var(--lough-ink)}
+.mbar svg{width:18px;height:18px}
+@media (max-width:860px){.mbar{display:grid}footer{padding-bottom:110px}}
+
+/* reveal */
+.js [data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js [data-reveal].in{opacity:1;transform:none}
+.js .hero-copy>*{opacity:0;transform:translateY(16px);animation:rise .9s var(--ease) forwards}
+.js .hero-copy>*:nth-child(2){animation-delay:.12s}.js .hero-copy>*:nth-child(3){animation-delay:.26s}.js .hero-copy>*:nth-child(4){animation-delay:.38s}
+.js .dial{opacity:0;animation:rise2 .9s .5s var(--ease) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes rise2{from{opacity:0;transform:translate(-50%,16px)}to{opacity:1;transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js [data-reveal],.js .hero-copy>*{opacity:1;transform:none}
+  .js .dial{opacity:1}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+<div class="progress" aria-hidden="true"></div>
+<div class="ribbon">Concept redesign by Jeig Torio · not the business's official website</div>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Shalom, back to top"><b>Shalom</b><span>B&amp;B &amp; Self Catering · Carlingford</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#house">The house</a>
+      <a href="#stay">B&amp;B or apartment</a>
+      <a href="#suns">Two balconies</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#here">Getting here</a>
+      <a href="#faq">Questions</a>
+    </nav>
+    <a class="btn btn--lough" href="#enquire">Enquire</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO: real-time 3D lough -->
+<section class="hero" id="hero" aria-label="Carlingford Lough, between the Cooley and Mourne mountains">
+  <div class="stage" id="stage">
+    <img class="poster" src="assets/poster.webp" width="1600" height="900" alt="Illustration: a low-poly Carlingford Lough with the Cooley Mountains on one side, the Mourne Mountains on the other, and a small white house on the shore">
+    <div class="tint" id="tint"></div>
+    <div class="scrim"></div>
+    <div class="pin js-only" data-pin="cooley"><span>Cooley Mountains</span></div>
+    <div class="pin js-only mob-hide" data-pin="lough"><span>Carlingford Lough</span></div>
+    <div class="pin js-only" data-pin="mourne"><span>Mourne Mountains</span></div>
+    <div class="pin js-only house" data-pin="house"><span>Shalom</span></div>
+
+    <div class="hero-copy">
+      <p class="kicker"><i aria-hidden="true"></i>Shalom is the Hebrew word for peace</p>
+      <h1><span class="l">Peace between</span> <span class="l"><em>two mountains.</em></span></h1>
+      <p class="hero-sub">A family-run Bed &amp; Breakfast and three one-bedroomed self-catering apartments on the shores of Carlingford Lough, Co. Louth.</p>
+      <div class="hero-cta">
+        <a class="btn btn--lough" href="#enquire">Plan an enquiry
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn--line hc-call" href="tel:+353429373151" style="background:rgba(251,248,242,.6)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>
+          +353 42 937 3151</a>
+      </div>
+    </div>
+
+    <p class="hint js-only" id="hint">Scroll, drag the scene or use the slider</p>
+    <p class="illus-tag">Illustration, not to scale</p>
+
+    <div class="dial js-only" role="group" aria-labelledby="dial-lbl">
+      <div class="dial-top"><b id="dial-lbl">Morning ↔ Evening</b><span class="phase" id="phase">Morning</span></div>
+      <input class="range" id="tod" type="range" min="0" max="100" value="18" step="1" aria-label="Time of day, from morning to evening" aria-describedby="dial-note">
+      <div class="dial-ends"><button type="button" data-t="0.1">☀ Front balconies</button><button type="button" data-t="0.92">Rear balconies ☀</button></div>
+      <p class="dial-note" id="dial-note" aria-live="polite">The apartments' front balconies look over Carlingford Lough and the Mournes, and catch the morning sun.</p>
+    </div>
+  </div>
+  <div class="chapters" aria-label="From morning to evening">
+    <article class="chap"><p class="when">Morning</p><h2>Front balconies</h2><p>The apartments' living areas are upstairs, with front balconies over Carlingford Lough and the Mournes that “catch the morning sun”.</p></article>
+    <article class="chap mid"><p class="when">Midday</p><h2>Between two ranges</h2><p>“Overlooked by the Cooley mountains on one side and the Mourne mountains on the other side of the Lough.”</p></article>
+    <article class="chap eve"><p class="when">Evening</p><h2>Rear balconies</h2><p>Round the back, the rear balconies look over the Cooley Mountains and “catch the evening sun”.</p></article>
+  </div>
+</section>
+
+<!-- THE HOUSE -->
+<section class="blk" id="house">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div data-reveal>
+        <p class="eyebrow">The house</p>
+        <p class="quote">“On the shores of <em>Carlingford Lough</em>, overlooked by the Cooley mountains on one side and the Mourne mountains on the other side of the Lough.”</p>
+        <p class="quote-src">In Shalom's own words</p>
+        <p class="lede">A family-run Bed &amp; Breakfast on Ghan Road, with three one-bedroomed self-catering apartments in the grounds. A few minutes on foot from the town centre, 80 km north of Dublin and 70 km south of Belfast.</p>
+        <p class="listed">As listed on their site: “Bord Failte Approved”.</p>
+      </div>
+      <figure class="peace" data-reveal>
+        <img src="assets/lough-dusk.webp" width="1600" height="945" loading="lazy" alt="Concept photo: a calm lough between dark mountains at dusk, with an orange sky">
+        <span class="tag">Concept photo</span>
+        <figcaption class="word"><b>Shalom</b><span>(Shalom is the Hebrew word for peace)</span></figcaption>
+      </figure>
+    </div>
+    <div class="facts" data-reveal>
+      <div><b>5<small>min</small></b><span>walk to the town centre</span></div>
+      <div><b>4<small>min</small></b><span>walk to the Four Seasons Hotel and Ghan House</span></div>
+      <div><b>3</b><span>one-bedroomed self-catering apartments</span></div>
+      <div><b>80<small>km</small></b><span>north of Dublin, and 70 km south of Belfast</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORER -->
+<section class="blk dark" id="stay">
+  <div class="wrap">
+    <div class="head-row" data-reveal>
+      <div>
+        <p class="eyebrow on-dark">Where you'll sleep</p>
+        <h2>B&amp;B room, <em>or an apartment?</em></h2>
+      </div>
+      <p class="lede" style="max-width:28rem">Stay in the house, or take one of the three self-catering apartments in the grounds. Tap through to see what each one has.</p>
+    </div>
+    <div class="tabs js-only" role="tablist" aria-label="Choose a way to stay">
+      <button role="tab" id="tab-bb" aria-controls="p-bb" aria-selected="true" type="button">B&amp;B room</button>
+      <button role="tab" id="tab-apt" aria-controls="p-apt" aria-selected="false" type="button" tabindex="-1">Self-catering apartment</button>
+    </div>
+
+    <div class="panel" id="p-bb" role="tabpanel" aria-labelledby="tab-bb">
+      <p class="panel-title">B&amp;B rooms</p>
+      <div class="rooms">
+        <figure class="room photo"><img src="assets/room-light.webp" width="1100" height="1056" loading="lazy" alt="Concept photo: a bright bedroom with white linen and a tall window"><figcaption>Concept photo</figcaption></figure>
+        <article class="room">
+          <span class="chip">Room type</span>
+          <h3>Single</h3>
+          <p>A room for one guest in the family-run house on Ghan Road.</p>
+          <a class="btn btn--peach" href="#enquire" data-pre="bb-single">Ask about a single</a>
+        </article>
+        <article class="room">
+          <span class="chip">Room type</span>
+          <h3>Sharing</h3>
+          <p>A room for guests sharing. Tell us who's coming and we'll suggest what suits.</p>
+          <a class="btn btn--peach" href="#enquire" data-pre="bb-sharing">Ask about sharing</a>
+        </article>
+      </div>
+    </div>
+
+    <div class="panel" id="p-apt" role="tabpanel" aria-labelledby="tab-apt">
+      <p class="panel-title">Self-catering apartments</p>
+      <div class="apt">
+        <div class="apt-svg">
+          <svg id="aptsvg" viewBox="0 0 640 420" role="img" aria-labelledby="apt-t">
+            <title id="apt-t">Illustration: section through an apartment, with a front balcony facing the lough and the Mournes, and a rear balcony facing the Cooley Mountains</title>
+            <defs>
+              <linearGradient id="asky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" id="asky0" stop-color="#9fb7c9"/><stop offset="1" id="asky1" stop-color="#f6c7a8"/></linearGradient>
+            </defs>
+            <rect width="640" height="420" fill="url(#asky)"/>
+            <circle id="asun" cx="560" cy="80" r="22" fill="#fff1dc"/>
+            <path d="M0 250 L60 180 L110 215 L170 150 L230 250 Z" fill="#53735d" opacity=".9"/>
+            <text x="20" y="240" font-family="Figtree,sans-serif" font-size="12" font-weight="600" fill="#17302f" letter-spacing="1.5">COOLEY</text>
+            <path d="M420 270 L480 210 L520 236 L580 186 L640 240 L640 270 Z" fill="#5d6b78" opacity=".9"/>
+            <rect x="420" y="268" width="220" height="40" fill="#3f7f78"/>
+            <text x="436" y="292" font-family="Figtree,sans-serif" font-size="12" font-weight="600" fill="#fbf8f2" letter-spacing="1.5">LOUGH · MOURNES</text>
+            <rect x="0" y="330" width="640" height="90" fill="#2c4c45"/>
+            <!-- building -->
+            <rect x="170" y="190" width="260" height="140" fill="#fbf8f2"/>
+            <path d="M156 194 L300 120 L444 194 Z" fill="#4a5866"/>
+            <line x1="170" y1="262" x2="430" y2="262" stroke="#c9d3cf" stroke-width="3"/>
+            <!-- upstairs living -->
+            <g class="hot" data-spot="living">
+              <rect x="176" y="198" width="248" height="60" fill="#f3ece0"/>
+              <rect x="300" y="226" width="56" height="28" fill="#cdb79a"/><rect x="300" y="216" width="56" height="10" fill="#e6dccb"/>
+              <rect x="200" y="232" width="70" height="22" rx="4" fill="#7a9a8e"/>
+              <rect class="hl" x="176" y="198" width="248" height="60"/>
+            </g>
+            <g class="hot" data-spot="beds">
+              <rect x="176" y="266" width="248" height="60" fill="#efe8dc"/>
+              <rect x="196" y="300" width="70" height="20" fill="#fff"/><rect x="196" y="292" width="20" height="10" fill="#dfe7e2"/>
+              <rect x="286" y="304" width="44" height="16" fill="#fff"/>
+              <rect x="350" y="310" width="50" height="8" fill="#e6dccb"/>
+              <rect class="hl" x="176" y="266" width="248" height="60"/>
+            </g>
+            <!-- balconies -->
+            <g class="hot" data-spot="front">
+              <rect x="430" y="246" width="54" height="12" fill="#e9e3d6"/>
+              <path d="M430 246 V226 M444 246 V226 M458 246 V226 M472 246 V226 M484 246 V226 M430 226 H484" stroke="#17302f" stroke-width="2.5" fill="none"/>
+              <rect class="hl" x="426" y="220" width="62" height="42"/>
+            </g>
+            <g class="hot" data-spot="rear">
+              <rect x="116" y="246" width="54" height="12" fill="#e9e3d6"/>
+              <path d="M116 246 V226 M128 246 V226 M142 246 V226 M156 246 V226 M170 246 V226 M116 226 H170" stroke="#17302f" stroke-width="2.5" fill="none"/>
+              <rect class="hl" x="112" y="220" width="62" height="42"/>
+            </g>
+            <g font-family="Figtree,sans-serif" font-size="13" font-weight="700" fill="#17302f">
+              <circle cx="457" cy="206" r="13" fill="#f2b89a"/><text x="453" y="211">1</text>
+              <circle cx="143" cy="206" r="13" fill="#f2b89a"/><text x="139" y="211">2</text>
+              <circle cx="300" cy="180" r="13" fill="#f2b89a"/><text x="296" y="185">3</text>
+              <circle cx="300" cy="350" r="13" fill="#f2b89a"/><text x="296" y="355">4</text>
+            </g>
+          </svg>
+          <div class="cap"><span>Illustration, not a floor plan</span><span>Tap a numbered part</span></div>
+        </div>
+        <div>
+          <div class="spots" id="spots">
+            <button class="spot" type="button" data-spot="front" aria-pressed="true"><i class="n">1</i><span><b>Front balcony · morning sun</b><span>Over Carlingford Lough and the Mournes. The front balconies “catch the morning sun”.</span></span></button>
+            <button class="spot" type="button" data-spot="rear" aria-pressed="false"><i class="n">2</i><span><b>Rear balcony · evening sun</b><span>Over the Cooley Mountains. The rear balconies “catch the evening sun”.</span></span></button>
+            <button class="spot" type="button" data-spot="living" aria-pressed="false"><i class="n">3</i><span><b>Living area &amp; kitchen, upstairs</b><span>The living area and kitchen are upstairs, opening onto both balconies. “All mod cons and linen supplied.”</span></span></button>
+            <button class="spot" type="button" data-spot="beds" aria-pressed="false"><i class="n">4</i><span><b>The beds</b><span>Each apartment has a double bed, a single bed and a fold-up single.</span></span></button>
+          </div>
+          <div class="apt-foot">
+            <a class="btn btn--peach" href="#enquire" data-pre="apt">Ask about an apartment</a>
+            <a class="btn btn--ghost-l js-only" href="#hero" id="see-sun">See the sun on the lough ↑</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO BALCONIES -->
+<section class="blk" id="suns">
+  <div class="wrap">
+    <div class="head-row" data-reveal>
+      <div>
+        <p class="eyebrow">Two balconies, two suns</p>
+        <h2>Coffee with the sunrise. <em>Supper with the sunset.</em></h2>
+      </div>
+    </div>
+    <div class="suns">
+      <article class="sun-card" data-reveal>
+        <img src="assets/boat.webp" width="1300" height="986" loading="lazy" alt="Concept photo: a small fishing boat on golden water below a green hillside">
+        <span class="cp">Concept photo</span>
+        <p class="when">Front · morning</p>
+        <h3>The lough and the Mournes</h3>
+        <p>Every apartment's front balcony looks over Carlingford Lough to the Mourne mountains, and catches the morning sun.</p>
+        <button class="btn btn--peach js-only" type="button" data-goto="0.12">Show me the morning</button>
+      </article>
+      <article class="sun-card eve" data-reveal>
+        <img src="assets/lough-dusk.webp" width="1600" height="945" loading="lazy" alt="Concept photo: mountains in silhouette against an orange evening sky over still water">
+        <span class="cp">Concept photo</span>
+        <p class="when">Rear · evening</p>
+        <h3>The Cooley Mountains</h3>
+        <p>Round the back, the rear balconies look over the Cooley Mountains, and catch the evening sun.</p>
+        <button class="btn btn--peach js-only" type="button" data-goto="0.9">Show me the evening</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="blk alt" id="gallery">
+  <div class="wrap">
+    <div class="head-row" data-reveal>
+      <div>
+        <p class="eyebrow">Gallery</p>
+        <h2>A feel for <em>the place.</em></h2>
+      </div>
+      <p class="fine" style="max-width:24rem">Stock concept photos for this sample. Shalom's own photos of the house, apartments and views would go here.</p>
+    </div>
+    <div class="gal" id="gal" data-reveal>
+      <button class="g1" type="button" data-i="0"><img src="assets/lough-dusk.webp" width="1600" height="945" loading="lazy" alt="Concept photo: a lough between mountains at dusk"><figcaption>Concept photo. A lough at dusk</figcaption><span class="zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 9V4h5M20 15v5h-5M4 4l6 6M20 20l-6-6"/></svg></span></button>
+      <button class="g2" type="button" data-i="1"><img src="assets/room-light.webp" width="1100" height="1056" loading="lazy" alt="Concept photo: a bright bedroom with white linen"><figcaption>Concept photo. A bright bedroom</figcaption><span class="zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 9V4h5M20 15v5h-5M4 4l6 6M20 20l-6-6"/></svg></span></button>
+      <button class="g3" type="button" data-i="2"><img src="assets/kitchen.webp" width="1400" height="934" loading="lazy" alt="Concept photo: a small kitchen with open shelves and a window"><figcaption>Concept photo. A small kitchen</figcaption><span class="zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 9V4h5M20 15v5h-5M4 4l6 6M20 20l-6-6"/></svg></span></button>
+      <button class="g4" type="button" data-i="3"><img src="assets/boat.webp" width="1300" height="986" loading="lazy" alt="Concept photo: a fishing boat on calm golden water"><figcaption>Concept photo. Calm water</figcaption><span class="zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 9V4h5M20 15v5h-5M4 4l6 6M20 20l-6-6"/></svg></span></button>
+      <button class="g5" type="button" data-i="4"><img src="assets/room-evening.webp" width="1000" height="1200" loading="lazy" alt="Concept photo: a bedroom in the evening with an open window"><figcaption>Concept photo. Evening light</figcaption><span class="zoom" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 9V4h5M20 15v5h-5M4 4l6 6M20 20l-6-6"/></svg></span></button>
+    </div>
+  </div>
+</section>
+
+<!-- GETTING HERE -->
+<section class="blk" id="here">
+  <div class="wrap">
+    <div class="head-row" data-reveal>
+      <div>
+        <p class="eyebrow">Getting here</p>
+        <h2>Five minutes <em>from town.</em></h2>
+      </div>
+      <p class="lede" style="max-width:26rem">Shalom, Ghan Road, Carlingford, Co. Louth, Republic of Ireland.</p>
+    </div>
+    <div class="here-grid">
+      <div data-reveal>
+        <div class="walk" id="walk">
+          <h3>On foot from Shalom</h3>
+          <div class="track">
+            <span class="walker" aria-hidden="true"></span>
+            <div class="stop home"><b>Shalom, Ghan Road</b><span class="t">Start here</span></div>
+            <div class="stop"><b>Four Seasons Hotel</b><span class="t"><strong>4</strong> minutes' walk</span></div>
+            <div class="stop"><b>Ghan House</b><span class="t"><strong>4</strong> minutes' walk</span></div>
+            <div class="stop"><b>Carlingford town centre</b><span class="t"><strong>5</strong> minutes' walk</span></div>
+          </div>
+          <p class="fine">Walk times as Shalom gives them.</p>
+        </div>
+        <div class="far">
+          <svg viewBox="0 0 80 160" aria-hidden="true"><line x1="40" y1="12" x2="40" y2="148" stroke="rgba(251,248,242,.35)" stroke-width="2" stroke-dasharray="4 5"/><circle cx="40" cy="12" r="6" fill="#fbf8f2"/><circle cx="40" cy="76" r="9" fill="#f2b89a"/><circle cx="40" cy="148" r="6" fill="#fbf8f2"/><text x="52" y="16" fill="#fbf8f2" font-size="10" font-family="Figtree,sans-serif">Belfast</text><text x="54" y="80" fill="#f2b89a" font-size="10" font-family="Figtree,sans-serif">Shalom</text><text x="52" y="152" fill="#fbf8f2" font-size="10" font-family="Figtree,sans-serif">Dublin</text></svg>
+          <p>80 km north of Dublin, 70 km south of Belfast.<span>Carlingford, Co. Louth</span></p>
+        </div>
+      </div>
+      <div class="map" id="map" data-reveal>
+        <div class="map-face" id="mapface" aria-label="Illustration: Shalom on the Cooley side of Carlingford Lough, with the Mourne Mountains across the water">
+          <svg class="mapart" viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="400" height="340" fill="#dfe8e1"/>
+            <path d="M-20 92 C 60 80, 120 120, 210 104 S 350 70, 430 86 L430 168 C 340 160, 270 196, 190 184 S 50 160,-20 182Z" fill="#8fb8ad"/>
+            <path d="M-20 108 C 60 98, 120 136, 210 120 S 350 88, 430 102" fill="none" stroke="#fbf8f2" stroke-width="1.2" stroke-dasharray="2 7" opacity=".8"/>
+            <g fill="#b9c3c6" stroke="#9aa6aa" stroke-width="1"><path d="M10 70 L42 30 L66 56 L98 18 L130 60Z"/><path d="M150 64 L188 22 L214 50 L246 14 L284 58Z"/><path d="M300 60 L334 26 L360 48 L392 20 L420 56Z"/></g>
+            <g fill="#aebfa6" stroke="#93a88b" stroke-width="1"><path d="M-10 330 L40 262 L78 296 L118 248 L170 330Z"/><path d="M200 340 L250 280 L290 310 L330 266 L390 340Z"/></g>
+            <path d="M120 236 C 150 226, 190 232, 230 226" fill="none" stroke="#c9b48f" stroke-width="4" stroke-linecap="round"/>
+            <g font-family="Figtree,sans-serif" font-weight="700" letter-spacing="1.6" font-size="9.5" fill="#4a5866">
+              <text x="196" y="12" text-anchor="middle">MOURNE MOUNTAINS</text>
+              <text x="200" y="146" text-anchor="middle" fill="#fbf8f2">CARLINGFORD LOUGH</text>
+              <text x="300" y="250" text-anchor="middle">COOLEY MOUNTAINS</text>
+            </g>
+            <circle cx="176" cy="214" r="22" fill="#1f3b3a" opacity=".12"/><circle cx="176" cy="214" r="9" fill="#1f3b3a"/><circle cx="176" cy="214" r="3.5" fill="#f2b89a"/>
+            <text x="192" y="210" font-family="Newsreader,serif" font-style="italic" font-size="15" fill="#17302f">Shalom</text>
+          </svg>
+          <div class="addr"><b>Shalom</b><span>Ghan Road, Carlingford, Co. Louth</span><span style="font-size:12px;margin-top:6px;opacity:.7">Sketch, not to scale. Tap “Show map” for the real one.</span></div>
+          <div class="row">
+            <button class="btn btn--lough js-only" type="button" id="showmap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Show map</button>
+            <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&amp;query=Shalom+BB+Carlingford" target="_blank" rel="noopener" style="background:rgba(251,248,242,.85)">Get directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="blk alt" id="faq">
+  <div class="wrap faq-grid">
+    <div data-reveal>
+      <p class="eyebrow">Questions</p>
+      <h2>Good to <em>know.</em></h2>
+      <p class="lede">Anything else, just ask: call +353 42 937 3151 or email info@shalomcarlingford.ie.</p>
+    </div>
+    <div class="faq" data-reveal>
+      <details><summary>What's the difference between a B&amp;B room and an apartment?<i aria-hidden="true"></i></summary><div class="a">B&amp;B rooms are in the family-run house, as a single or a sharing room. The three one-bedroomed self-catering apartments are in the grounds, each with its own living area and kitchen upstairs.</div></details>
+      <details><summary>What beds are in an apartment?<i aria-hidden="true"></i></summary><div class="a">Each apartment has a double bed, a single bed and a fold-up single bed.</div></details>
+      <details><summary>Is linen supplied in the apartments?<i aria-hidden="true"></i></summary><div class="a">Yes: “All mod cons and linen supplied.”</div></details>
+      <details><summary>Which balcony gets the sun?<i aria-hidden="true"></i></summary><div class="a">Both, at different times. The front balconies look over Carlingford Lough and the Mournes and catch the morning sun. The rear balconies look over the Cooley Mountains and catch the evening sun.</div></details>
+      <details><summary>How far is it to the town centre?<i aria-hidden="true"></i></summary><div class="a">About a 5-minute walk. The Four Seasons Hotel and Ghan House are about 4 minutes' walk away.</div></details>
+      <details><summary>How far is Carlingford from Dublin and Belfast?<i aria-hidden="true"></i></summary><div class="a">Shalom is 80 km north of Dublin and 70 km south of Belfast.</div></details>
+      <details><summary>What are the rates, and how do I book?<i aria-hidden="true"></i></summary><div class="a">Ask us: call +353 42 937 3151 or email info@shalomcarlingford.ie with your dates, and we'll tell you what's free and the rate. The enquiry helper below writes the email for you.</div></details>
+      <details><summary>Can you suggest places to eat and things to do?<i aria-hidden="true"></i></summary><div class="a">Ask us when you get in touch: call or email.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY HELPER -->
+<section class="blk dark" id="enquire">
+  <div class="wrap helper">
+    <div data-reveal>
+      <p class="eyebrow on-dark">Enquire</p>
+      <h2>Three taps to <em>a ready email.</em></h2>
+      <p class="lede">Choose how you'd like to stay, roughly when, and how many are coming. We'll write the email; you send it from your own email app.</p>
+    </div>
+    <div class="card" data-reveal>
+      <div class="js-only" id="helper">
+        <div class="steps" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+        <div class="step" data-step="1">
+          <p class="q"><small>Step 1 of 3</small>How would you like to stay?</p>
+          <div class="chips" role="group" aria-label="Type of stay">
+            <button class="chip-b big" type="button" data-stay="bb" aria-pressed="false"><b>B&amp;B room</b><span>In the house · single or sharing</span></button>
+            <button class="chip-b big" type="button" data-stay="apt" aria-pressed="false"><b>Self-catering apartment</b><span>One-bedroomed, in the grounds</span></button>
+          </div>
+          <div class="sub-chips" id="bbtype" hidden>
+            <p class="lbl">Which room type?</p>
+            <div class="chips" role="group" aria-label="B&amp;B room type" style="margin-top:10px">
+              <button class="chip-b" type="button" data-room="Single" aria-pressed="false">Single</button>
+              <button class="chip-b" type="button" data-room="Sharing" aria-pressed="false">Sharing</button>
+              <button class="chip-b" type="button" data-room="" aria-pressed="false">Not sure yet</button>
+            </div>
+          </div>
+        </div>
+        <div class="step" data-step="2" hidden>
+          <p class="q"><small>Step 2 of 3</small>Roughly when?</p>
+          <div class="chips" role="group" aria-label="Rough month" id="months"></div>
+        </div>
+        <div class="step" data-step="3" hidden>
+          <p class="q"><small>Step 3 of 3</small>How many guests?</p>
+          <div class="chips" role="group" aria-label="Number of guests" id="guests">
+            <button class="chip-b" type="button" data-g="1" aria-pressed="false">1 guest</button>
+            <button class="chip-b" type="button" data-g="2" aria-pressed="false">2 guests</button>
+            <button class="chip-b" type="button" data-g="3" aria-pressed="false">3 guests</button>
+            <button class="chip-b" type="button" data-g="4" aria-pressed="false">4 guests</button>
+            <button class="chip-b" type="button" data-g="5+" aria-pressed="false">5 or more</button>
+          </div>
+        </div>
+        <div class="step" data-step="4" hidden>
+          <p class="q"><small>Ready</small>Your email to Shalom</p>
+          <div class="msg" id="msg" tabindex="0" aria-live="polite"></div>
+          <div class="res-actions">
+            <a class="btn btn--lough" id="mailgo" href="mailto:info@shalomcarlingford.ie">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Open in my email app</a>
+            <button class="btn btn--line copy" type="button" id="copymsg">Copy message</button>
+          </div>
+          <p class="privacy">This opens your own email app. Nothing is sent or stored by this page.</p>
+        </div>
+        <div class="nav-row">
+          <button class="txt-btn" type="button" id="back" hidden>← Back</button>
+          <span></span>
+          <button class="btn btn--lough" type="button" id="next" disabled>Next</button>
+        </div>
+      </div>
+      <div class="no-js-only helper-nojs">
+        <p class="q">Ask Shalom directly</p>
+        <p>Email with the kind of stay (B&amp;B room or self-catering apartment), rough dates and number of guests.</p>
+        <a class="btn btn--lough" href="mailto:info@shalomcarlingford.ie">Email info@shalomcarlingford.ie</a>
+        <a class="btn btn--line" href="tel:+353429373151">Call +353 42 937 3151</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="blk dark" id="contact" style="padding-top:0;border-top:1px solid var(--rule-l)">
+  <div class="wrap">
+    <div class="contact-grid" style="margin-top:clamp(56px,7vw,96px)">
+      <div class="cbox">
+        <span class="k">Phone</span>
+        <a class="v" href="tel:+353429373151">+353 42 937 3151</a>
+        <div class="acts"><a class="btn btn--peach" href="tel:+353429373151">Call</a><button class="btn btn--ghost-l copy js-only" type="button" data-copy="+353 42 937 3151">Copy number</button></div>
+      </div>
+      <div class="cbox">
+        <span class="k">Email</span>
+        <a class="v" href="mailto:info@shalomcarlingford.ie">info@shalomcarlingford.ie</a>
+        <div class="acts"><a class="btn btn--peach" href="mailto:info@shalomcarlingford.ie">Email</a><button class="btn btn--ghost-l copy js-only" type="button" data-copy="info@shalomcarlingford.ie">Copy email</button></div>
+      </div>
+      <div class="cbox">
+        <span class="k">Address</span>
+        <span class="v">Shalom, Ghan Road, Carlingford, Co. Louth</span>
+        <div class="acts"><a class="btn btn--peach" href="https://www.google.com/maps/search/?api=1&amp;query=Shalom+BB+Carlingford" target="_blank" rel="noopener">Directions</a><button class="btn btn--ghost-l copy js-only" type="button" data-copy="Shalom, Ghan Road, Carlingford, Co. Louth, Republic of Ireland">Copy address</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="fb">Shalom</span>
+    <nav aria-label="Footer"><a href="#house">The house</a><a href="#stay">B&amp;B or apartment</a><a href="#suns">Two balconies</a><a href="#gallery">Gallery</a><a href="#here">Getting here</a><a href="#faq">Questions</a><a href="#enquire">Enquire</a></nav>
+    <hr>
+    <p>Concept redesign by Jeig Torio · not the business's official website</p>
+    <p>Photos are stock concept placeholders, not Shalom's own rooms or views. The 3D lough is an illustration, not to scale.</p>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick contact">
+  <a class="pri" href="tel:+353429373151"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>Call</a>
+  <a href="mailto:info@shalomcarlingford.ie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
+  <a href="#enquire"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/></svg>Enquire</a>
+</nav>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <img id="lb-img" src="" alt="">
+  <p class="lb-cap" id="lb-cap"></p>
+  <button class="lb-btn lb-x" type="button" id="lb-x" aria-label="Close"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lb-btn lb-p" type="button" id="lb-p" aria-label="Previous photo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="lb-btn lb-n" type="button" id="lb-n" aria-label="Next photo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+
+<script>
+(function(){
+'use strict';
+var EMAIL='info@shalomcarlingford.ie';
+var RM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+if(RM) document.documentElement.classList.add('no-scrub');
+
+/* ---------- shared time of day ---------- */
+var T={t:0.18,subs:[]};
+T.set=function(t,src){t=Math.max(0,Math.min(1,t));T.t=t;for(var i=0;i<T.subs.length;i++)T.subs[i](t,src)};
+T.on=function(f){T.subs.push(f)};
+var tod=$('#tod'),phase=$('#phase'),note=$('#dial-note');
+var NOTES={m:"The apartments' front balconies look over Carlingford Lough and the Mournes, and catch the morning sun.",
+  d:"Midday on the shores of Carlingford Lough, between the Cooley and the Mourne mountains.",
+  e:"Round the back, the rear balconies look over the Cooley Mountains, and catch the evening sun."};
+var lastPh='';
+T.on(function(t,src){
+  if(src!=='slider') tod.value=Math.round(t*100);
+  var ph=t<0.42?'m':(t<0.6?'d':'e');
+  if(ph!==lastPh){lastPh=ph;phase.textContent=ph==='m'?'Morning':ph==='d'?'Midday':'Evening';note.textContent=NOTES[ph];}
+});
+tod.addEventListener('input',function(){T.set(tod.value/100,'slider')});
+$$('.dial-ends button').forEach(function(b){b.addEventListener('click',function(){animateTo(+b.dataset.t)})});
+var animRaf=0;
+function animateTo(target){
+  cancelAnimationFrame(animRaf);
+  if(RM){T.set(target,'btn');return}
+  var from=T.t,st=performance.now(),d=1200;
+  (function step(now){var k=Math.min(1,(now-st)/d);k=1-Math.pow(1-k,3);T.set(from+(target-from)*k,'btn');if(k<1)animRaf=requestAnimationFrame(step)})(st);
+}
+window.__shalomSetTime=function(t){T.set(t,'test')};
+
+/* scroll drives the sun while the hero is pinned */
+var hero=$('#hero'),prog=$('.progress'),hint=$('#hint'),heroCopy=$('.hero-copy');
+var ticking=false,scrolled=false;
+function onScroll(){
+  if(ticking) return; ticking=true;
+  requestAnimationFrame(function(){
+    ticking=false;
+    var h=document.documentElement.scrollHeight-innerHeight;
+    prog.style.setProperty('--p',h>0?(scrollY/h).toFixed(4):0);
+    if(!RM){
+      var r=hero.getBoundingClientRect(),span=r.height-innerHeight;
+      if(span>0 && r.bottom>=innerHeight*0.5){
+        var p=Math.max(0,Math.min(1,-r.top/span));
+        T.set(0.08+p*0.86,'scroll');
+        heroCopy.style.opacity=Math.max(0,1-p*4).toFixed(3);heroCopy.style.visibility=p>.3?'hidden':'';
+      }
+    }
+    if(!scrolled && scrollY>40){scrolled=true; if(hint) hint.style.opacity='0';}
+  });
+}
+addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+/* poster tint fallback (used when WebGL is missing) */
+var tint=$('#tint');
+function lerpC(a,b,k){var pa=parseInt(a.slice(1),16),pb=parseInt(b.slice(1),16);var r=(pa>>16)+(((pb>>16)-(pa>>16))*k),g=((pa>>8)&255)+((((pb>>8)&255)-((pa>>8)&255))*k),bl=(pa&255)+(((pb&255)-(pa&255))*k);return 'rgb('+(r|0)+','+(g|0)+','+(bl|0)+')'}
+function tintFor(t){return t<0.5?lerpC('#f2a27a','#dfeee9',t/0.5):lerpC('#dfeee9','#e8a030',(t-0.5)/0.5)}
+
+/* ---------- 3D scene ---------- */
+var stage=$('#stage');
+function hasGL(){try{var c=document.createElement('canvas');return !!(window.WebGLRenderingContext&&(c.getContext('webgl2')||c.getContext('webgl')))}catch(e){return false}}
+function noGL(){tint.style.opacity='.75';tint.style.mixBlendMode='overlay';T.on(function(t){tint.style.backgroundColor=tintFor(t)});tint.style.backgroundColor=tintFor(T.t);$$('.pin').forEach(function(p){p.remove()})}
+if(!hasGL()){noGL()}
+else{
+  var start=function(){import('https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js').then(build).catch(function(){noGL()})};
+  if(document.readyState==='complete') setTimeout(start,60); else addEventListener('load',function(){setTimeout(start,60)});
+}
+
+function build(THREE){
+  var W=stage.clientWidth,H=stage.clientHeight;
+  var renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});
+  renderer.setPixelRatio(Math.min(devicePixelRatio||1,2));
+  renderer.setSize(W,H,false);
+  renderer.outputColorSpace=THREE.SRGBColorSpace;
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
+  renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+  var cv=renderer.domElement;cv.setAttribute('aria-hidden','true');
+  stage.insertBefore(cv,$('.scrim',stage));
+
+  var scene=new THREE.Scene();
+  var camera=new THREE.PerspectiveCamera(42,W/H,0.5,900);camera.position.set(9,7,38);
+  var C=THREE.Color;
+
+  /* value noise */
+  function hash(x,z){var s=Math.sin(x*127.1+z*311.7)*43758.5453;return s-Math.floor(s)}
+  function noise(x,z){var xi=Math.floor(x),zi=Math.floor(z),xf=x-xi,zf=z-zi;var u=xf*xf*(3-2*xf),v=zf*zf*(3-2*zf);
+    var a=hash(xi,zi),b=hash(xi+1,zi),c=hash(xi,zi+1),d=hash(xi+1,zi+1);return a+(b-a)*u+(c-a)*v+(a-b-c+d)*u*v}
+  function fbm(x,z){var f=0,a=.5;for(var i=0;i<4;i++){f+=a*noise(x,z);x*=2.03;z*=2.03;a*=.5}return f}
+  function ss(a,b,x){var t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t)}
+  function ridge(x,z){var f=0,a=.5;for(var i=0;i<4;i++){var r=1-Math.abs(2*noise(x,z)-1);f+=a*r*r;x*=2.1;z*=2.1;a*=.5}return f}
+  function meander(z){return 2.6*Math.sin(z*.03+.7)}
+  function halfW(z){return 7.5+ss(10,-150,z)*12}
+  function height(x,z){
+    var xl=x-meander(z),hw=halfW(z),dl=-xl-hw*.82,dr=xl-hw;
+    var cooley=ss(0,15,dl)*(5+13*ridge(x*.05+3.1,z*.04))*(0.8+0.2*Math.sin(z*.045+1.3));
+    var mourne=ss(0,16,dr)*(6+21*ridge(x*.045+11.7,z*.035+4.2))*(0.75+0.25*Math.sin(z*.03-.6));
+    var shore=ss(-1.5,2,dl)*1.15+ss(-1.5,2,dr)*1.05;
+    return cooley+mourne+shore-1.15+(fbm(x*.2,z*.2)-.5)*.35;
+  }
+  /* terrain */
+  var tg=new THREE.PlaneGeometry(200,320,80,120);tg.rotateX(-Math.PI/2);tg.translate(0,0,-90);
+  var pos=tg.attributes.position;
+  for(var i=0;i<pos.count;i++){var x=pos.getX(i),z=pos.getZ(i);pos.setY(i,height(x,z))}
+  tg=tg.toNonIndexed();pos=tg.attributes.position;
+  var cols=new Float32Array(pos.count*3),tc=new C();
+  var cSand=new C('#c9b48f'),cGrass=new C('#6f9467'),cHeath=new C('#8a8f62'),cRock=new C('#77808a'),cTop=new C('#9aa2a8');
+  for(var f=0;f<pos.count;f+=3){
+    var y=(pos.getY(f)+pos.getY(f+1)+pos.getY(f+2))/3, j=hash(f*.13,y)*.08;
+    if(y<0.25) tc.copy(cSand); else if(y<3.2) tc.copy(cGrass).lerp(cHeath,ss(1.5,3.2,y)); else if(y<7.5) tc.copy(cHeath).lerp(cRock,ss(3.2,7.5,y)); else tc.copy(cRock).lerp(cTop,ss(7.5,13,y));
+    tc.offsetHSL(0,0,j-.04);
+    for(var k=0;k<3;k++){cols[(f+k)*3]=tc.r;cols[(f+k)*3+1]=tc.g;cols[(f+k)*3+2]=tc.b}
+  }
+  tg.setAttribute('color',new THREE.BufferAttribute(cols,3));tg.computeVertexNormals();
+  var terrain=new THREE.Mesh(tg,new THREE.MeshStandardMaterial({vertexColors:true,flatShading:true,roughness:.95}));
+  terrain.receiveShadow=true;scene.add(terrain);
+
+  /* water */
+  var wg=new THREE.PlaneGeometry(200,320,40,76);wg.rotateX(-Math.PI/2);wg.translate(0,0,-90);wg=wg.toNonIndexed();
+  var wpos=wg.attributes.position,wbase=Float32Array.from(wpos.array);
+  var waterMat=new THREE.MeshStandardMaterial({color:'#3f7f78',flatShading:true,roughness:.2,metalness:.1,emissive:new C('#f6bfa0'),emissiveIntensity:.12});
+  var water=new THREE.Mesh(wg,waterMat);water.position.y=0.02;water.receiveShadow=true;scene.add(water);
+  function waves(time){
+    var a=wpos.array;
+    for(var i=0;i<a.length;i+=3){var x=wbase[i],z=wbase[i+2];a[i+1]=Math.sin(x*.45+time*.9)*.07+Math.cos(z*.38+time*.7)*.08+Math.sin((x+z)*.2+time*.5)*.05}
+    wpos.needsUpdate=true;wg.computeVertexNormals();
+  }
+  waves(0);
+
+  /* house + apartments */
+  var white=new THREE.MeshStandardMaterial({color:'#f4f1ea',roughness:.8,flatShading:true});
+  var slate=new THREE.MeshStandardMaterial({color:'#4a5866',roughness:.7,flatShading:true});
+  var winMat=new THREE.MeshStandardMaterial({color:'#8fa9b3',emissive:new C('#ffb766'),emissiveIntensity:0,roughness:.3});
+  var railMat=new THREE.MeshStandardMaterial({color:'#22303a',roughness:.6});
+  var homeZ=13,homeX=meander(homeZ)-halfW(homeZ)*.82-2.4,homeY=height(homeX,homeZ);
+  var group=new THREE.Group();group.position.set(homeX,Math.max(homeY,0.4),homeZ);scene.add(group);
+  function prism(w,h,d){var s=new THREE.Shape();s.moveTo(-d/2,0);s.lineTo(0,h);s.lineTo(d/2,0);s.lineTo(-d/2,0);var g=new THREE.ExtrudeGeometry(s,{depth:w,bevelEnabled:false});g.translate(0,0,-w/2);g.rotateY(Math.PI/2);return g}
+  function bldg(w,h,d,x,z){
+    var b=new THREE.Mesh(new THREE.BoxGeometry(d,h,w),white);b.position.set(x,h/2,z);b.castShadow=b.receiveShadow=true;group.add(b);
+    var r=new THREE.Mesh(prism(w+.2,h*.42,d+.3),slate);r.position.set(x,h,z);r.castShadow=true;group.add(r);
+    return b;
+  }
+  bldg(2.6,1.5,1.7,0,0);                         // the B&B house
+  var wg2=new THREE.BoxGeometry(.04,.32,.3);
+  [-0.8,0,0.8].forEach(function(z){[0.45,1.05].forEach(function(y){var w=new THREE.Mesh(wg2,winMat);w.position.set(.87,y,z);group.add(w)})});
+  bldg(3.4,1.9,1.5,-.4,-3.4);                     // apartments in the grounds
+  [-4.5,-3.4,-2.3].forEach(function(z){
+    [1,-1].forEach(function(side){
+      var bx=-.4+side*.95;
+      var deck=new THREE.Mesh(new THREE.BoxGeometry(.42,.05,.7),white);deck.position.set(bx,1.15,z);deck.castShadow=true;group.add(deck);
+      var rail=new THREE.Mesh(new THREE.BoxGeometry(.03,.22,.7),railMat);rail.position.set(bx+side*.2,1.27,z);group.add(rail);
+      var w=new THREE.Mesh(new THREE.BoxGeometry(.04,.36,.32),winMat);w.position.set(-.4+side*.76,1.42,z);group.add(w);
+      var w2=new THREE.Mesh(new THREE.BoxGeometry(.04,.28,.26),winMat);w2.position.set(-.4+side*.76,.5,z);group.add(w2);
+    });
+  });
+  /* trees */
+  var treeMat=new THREE.MeshStandardMaterial({color:'#3f6b4f',flatShading:true,roughness:.9});
+  var trunkMat=new THREE.MeshStandardMaterial({color:'#5b4636'});
+  var treeG=new THREE.ConeGeometry(.45,1.4,6),trunkG=new THREE.CylinderGeometry(.06,.08,.4,5);
+  var spots=[[-2.6,-2],[-2.2,3.5],[1.2,4.4],[-4,-6],[-5,1],[.6,-4.6],[-6.6,-3],[-1.4,-7.2],[-8,4],[-3.5,8]].map(function(p){return [homeX+p[0],homeZ+p[1]]});
+  spots.forEach(function(p,i){var y=height(p[0],p[1]);if(y<.3)return;var t=new THREE.Mesh(treeG,treeMat);var s=.8+hash(i,3)*.6;t.scale.setScalar(s);t.position.set(p[0],y+.9*s,p[1]);t.castShadow=true;scene.add(t);var tr=new THREE.Mesh(trunkG,trunkMat);tr.position.set(p[0],y+.2,p[1]);scene.add(tr)});
+  /* boats */
+  var boats=[];
+  var hullG=new THREE.BoxGeometry(.9,.18,.32),mastG=new THREE.CylinderGeometry(.02,.02,1.1,4),sailG=new THREE.BufferGeometry();
+  sailG.setAttribute('position',new THREE.Float32BufferAttribute([0,.15,0, 0,1.05,0, .55,.15,0],3));sailG.computeVertexNormals();
+  var sailMat=new THREE.MeshStandardMaterial({color:'#fbf8f2',side:THREE.DoubleSide,flatShading:true});
+  [[1.5,6],[4.5,-12],[-1.5,-30],[7,-55]].forEach(function(p,i){var b=new THREE.Group();var h=new THREE.Mesh(hullG,white);b.add(h);var m=new THREE.Mesh(mastG,railMat);m.position.y=.6;b.add(m);var s=new THREE.Mesh(sailG,sailMat);b.add(s);b.position.set(p[0]+meander(p[1]),.1,p[1]);b.rotation.y=i*1.3;scene.add(b);boats.push(b)});
+
+  /* clouds */
+  var cloudMat=new THREE.MeshStandardMaterial({color:'#ffffff',emissive:new C('#ffffff'),emissiveIntensity:.7,flatShading:true,roughness:1,transparent:true,opacity:.9,fog:false});
+  var clouds=[],cg=new THREE.IcosahedronGeometry(1,0);
+  [[-60,48,-150,1.2],[10,58,-200,1.6],[70,44,-160,1],[-20,40,-120,.8],[40,62,-230,1.3]].forEach(function(c,i){
+    var g=new THREE.Group();for(var j=0;j<4;j++){var m=new THREE.Mesh(cg,cloudMat);m.scale.set(5+hash(i,j)*4,1.6+hash(j,i)*1.1,3.5);m.position.set((j-1.5)*6,hash(i+j,2)*2,hash(j,i+3)*3);g.add(m)}
+    g.position.set(c[0],c[1],c[2]);g.scale.setScalar(c[3]);scene.add(g);clouds.push(g)});
+  /* sky dome */
+  var skyU={top:{value:new C('#9fb7c9')},hor:{value:new C('#f6c7a8')},sunDir:{value:new THREE.Vector3(0,.3,-1)},sunCol:{value:new C('#ffd2a8')}};
+  var sky=new THREE.Mesh(new THREE.SphereGeometry(500,32,16),new THREE.ShaderMaterial({side:THREE.BackSide,depthWrite:false,uniforms:skyU,
+    vertexShader:'varying vec3 vD;void main(){vD=normalize(position);gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
+    fragmentShader:'uniform vec3 top,hor,sunCol,sunDir;varying vec3 vD;void main(){float h=clamp(vD.y*1.6,0.,1.);vec3 c=mix(hor,top,pow(h,.7));float s=max(dot(normalize(vD),normalize(sunDir)),0.);c+=sunCol*(pow(s,9.)*.55+pow(s,600.)*1.6);gl_FragColor=vec4(c,1.);}'}));
+  scene.add(sky);
+  scene.fog=new THREE.Fog('#f6c7a8',45,250);
+
+  /* sun + lights */
+  var sunMesh=new THREE.Mesh(new THREE.SphereGeometry(9,24,12),new THREE.MeshBasicMaterial({color:'#fff2dd',fog:false,toneMapped:false}));scene.add(sunMesh);
+  var sunL=new THREE.DirectionalLight('#ffffff',2);sunL.castShadow=true;sunL.shadow.mapSize.set(1024,1024);
+  var sc=sunL.shadow.camera;sc.left=-14;sc.right=14;sc.top=14;sc.bottom=-14;sc.near=1;sc.far=140;sunL.shadow.bias=-.0008;sunL.shadow.normalBias=.02;
+  sunL.target.position.set(homeX,0,homeZ-2);scene.add(sunL,sunL.target);
+  var hemi=new THREE.HemisphereLight('#cfe0e6','#3d4a40',1.1);scene.add(hemi);
+
+  /* palette keyframes: dawn → midday → evening */
+  var K=[
+    {t:0,   top:'#a3add3',hor:'#f6bfa0',sun:'#ffc39a',water:'#4f9189',si:1.7,hi:1.05,fog:'#f2c3a6',win:.25,exp:1.02},
+    {t:.5,  top:'#6aaec4',hor:'#d9e8e4',sun:'#fff4e2',water:'#3b7d75',si:2.8,hi:1.15,fog:'#cddfdb',win:0,exp:1.0},
+    {t:1,   top:'#8c7fae',hor:'#f4b04f',sun:'#ffad4a',water:'#5f7a6c',si:2.1,hi:1.0,fog:'#eeb466',win:1.6,exp:1.06}];
+  var tmpA=new C(),tmpB=new C();
+  function mixKey(a,b,k,key){tmpA.set(a[key]);tmpB.set(b[key]);return tmpA.lerp(tmpB,k)}
+  var labelPts={cooley:new THREE.Vector3(-24,height(-24,-40)+1.5,-40),mourne:new THREE.Vector3(30,height(30,-55)+1.5,-55),lough:new THREE.Vector3(meander(-10)+1,.5,-10),house:new THREE.Vector3(homeX,2.6,homeZ-1.6)};
+  var pins={},pinsAll=false;$$('.pin').forEach(function(p){pins[p.dataset.pin]=p});
+  function applyTime(t){
+    var a=t<.5?K[0]:K[1],b=t<.5?K[1]:K[2],k=t<.5?t/.5:(t-.5)/.5;
+    skyU.top.value.copy(mixKey(a,b,k,'top'));skyU.hor.value.copy(mixKey(a,b,k,'hor'));skyU.sunCol.value.copy(mixKey(a,b,k,'sun'));
+    scene.fog.color.copy(mixKey(a,b,k,'fog'));
+    waterMat.color.copy(mixKey(a,b,k,'water'));waterMat.emissive.copy(mixKey(a,b,k,'hor'));
+    sunL.color.copy(mixKey(a,b,k,'sun'));sunL.intensity=a.si+(b.si-a.si)*k;
+    hemi.intensity=a.hi+(b.hi-a.hi)*k;hemi.color.copy(skyU.top.value).lerp(new C('#ffffff'),.35);
+    winMat.emissiveIntensity=a.win+(b.win-a.win)*k;cloudMat.emissive.copy(mixKey(a,b,k,'hor')).lerp(new C('#ffffff'),.35);
+    renderer.toneMappingExposure=a.exp+(b.exp-a.exp)*k;
+    var th=Math.PI*(0.1+0.8*t);            // right (Mourne side) → left (Cooley side)
+    var sx=Math.cos(th)*200,sy=8+Math.sin(th)*95,sz=-260;
+    sunMesh.position.set(sx,sy,sz);sunMesh.material.color.copy(mixKey(a,b,k,'sun')).lerp(new C('#ffffff'),.45);
+    skyU.sunDir.value.set(sx-camera.position.x,sy-camera.position.y,sz-camera.position.z).normalize();
+    sunL.position.set(homeX+Math.cos(th)*40,8+Math.sin(th)*30,homeZ-24);
+    dirty=true;
+  }
+  var dirty=true;
+  T.on(function(t,src){applyTime(t);var a=heroCopy.style.visibility==='hidden'||RM;if(a!==pinsAll){pinsAll=a}});applyTime(T.t);
+
+  /* camera, pointer, drag */
+  var mx=0,my=0,cx=0,cy=0;
+  function camBase(){var narrow=W/H<.9;return narrow?{fov:54,p:[-1,6.2,42],l:[-5,4.6,-30]}:{fov:44,p:[9,7,38],l:[-3,8,-30]}}
+  var base=camBase();camera.fov=base.fov;camera.updateProjectionMatrix();
+  stage.addEventListener('pointermove',function(e){if(e.pointerType==='mouse'){var r=stage.getBoundingClientRect();mx=(e.clientX-r.left)/r.width-.5;my=(e.clientY-r.top)/r.height-.5}});
+  var drag=null;
+  cv.addEventListener('pointerdown',function(e){drag={x:e.clientX,y:e.clientY,t:T.t,id:e.pointerId,moved:false}});
+  addEventListener('pointermove',function(e){if(!drag||e.pointerId!==drag.id)return;var dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+    if(!drag.moved){if(Math.abs(dx)>8&&Math.abs(dx)>Math.abs(dy)){drag.moved=true;try{cv.setPointerCapture(e.pointerId)}catch(_){}}else if(Math.abs(dy)>10){drag=null;return}else return}
+    T.set(drag.t+dx/Math.max(320,stage.clientWidth*.8),'drag')});
+  addEventListener('pointerup',function(){drag=null});addEventListener('pointercancel',function(){drag=null});
+
+  /* visibility: pause when off-screen or hidden */
+  var visible=true;
+  new IntersectionObserver(function(es){visible=es[0].isIntersecting;if(visible)dirty=true},{threshold:0}).observe(stage);
+  document.addEventListener('visibilitychange',function(){dirty=true});
+  function resize(){W=stage.clientWidth;H=stage.clientHeight;renderer.setSize(W,H,false);camera.aspect=W/H;base=camBase();camera.fov=base.fov;camera.updateProjectionMatrix();dirty=true}
+  addEventListener('resize',resize);
+  var v=new THREE.Vector3(),clock=new THREE.Clock(),first=true,frameN=0;
+  function placePins(){
+    for(var key in labelPts){var p=pins[key];if(!p)continue;v.copy(labelPts[key]).project(camera);
+      var x=(v.x*.5+.5)*W,y=(-v.y*.5+.5)*H,on=v.z<1&&x>70&&x<W-70&&y>30&&y<H-30;
+      p.style.transform='translate3d('+x.toFixed(1)+'px,'+y.toFixed(1)+'px,0)';p.classList.toggle('on',on&&!first&&(key==='house'||key==='lough'||pinsAll))}
+  }
+  renderer.setAnimationLoop(function(){
+    if(!visible||document.hidden) return;
+    var dt=Math.min(clock.getDelta(),.05),time=clock.elapsedTime;
+    cx+=(mx-cx)*Math.min(1,dt*3);cy+=(my-cy)*Math.min(1,dt*3);
+    var moving=Math.abs(mx-cx)+Math.abs(my-cy)>.0005;
+    if(!RM){frameN++; if(frameN%2===0) waves(time); clouds.forEach(function(c,i){c.position.x+=dt*(.6+i*.1);if(c.position.x>140)c.position.x=-140});boats.forEach(function(b,i){b.position.y=.1+Math.sin(time*1.1+i)*.05;b.rotation.z=Math.sin(time*.9+i*2)*.05}); dirty=true}
+    if(!dirty&&!moving) return;
+    var drift=(T.t-.5)*2;
+    camera.position.set(base.p[0]+cx*3+drift*.8,base.p[1]-cy*1.4,base.p[2]);
+    camera.lookAt(base.l[0]+cx*1.2,base.l[1],base.l[2]);
+    renderer.render(scene,camera);placePins();dirty=false;
+    if(first){first=false;cv.classList.add('ready');stage.classList.add('gl');setTimeout(placePins,50)}
+  });
+  window.__shalom3d={renderer:renderer,ready:function(){return !first}};
+}
+
+/* ---------- explorer tabs ---------- */
+var tabs=$$('[role="tab"]');
+function selTab(btn,focus){tabs.forEach(function(t){var on=t===btn;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;$('#'+t.getAttribute('aria-controls')).hidden=!on});if(focus)btn.focus()}
+tabs.forEach(function(t,i){t.addEventListener('click',function(){selTab(t)});t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();selTab(tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length],true)}})});
+selTab(tabs[0]);
+/* apartment hotspots */
+var spotBtns=$$('.spot'),hots=$$('#aptsvg .hot');
+function selSpot(name,fromUser){
+  spotBtns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.spot===name)});
+  hots.forEach(function(h){h.classList.toggle('on',h.dataset.spot===name)});
+  if(fromUser&&name==='front')animateTo(.12);
+  if(fromUser&&name==='rear')animateTo(.9);
+}
+spotBtns.forEach(function(b){b.addEventListener('click',function(){selSpot(b.dataset.spot,true)})});
+hots.forEach(function(h){h.addEventListener('click',function(){selSpot(h.dataset.spot,true)})});
+selSpot('front');
+var asky0=$('#asky0'),asky1=$('#asky1'),asun=$('#asun');
+T.on(function(t){var a=t<.5?['#8fa7c4','#f6bfa0']:['#7fb6c4','#eef3ee'],b=t<.5?['#7fb6c4','#eef3ee']:['#6d78a0','#f4b04f'],k=t<.5?t/.5:(t-.5)/.5;
+  asky0.setAttribute('stop-color',lerpC(a[0],b[0],k));asky1.setAttribute('stop-color',lerpC(a[1],b[1],k));
+  var th=Math.PI*(.1+.8*t);asun.setAttribute('cx',(320+Math.cos(th)*280).toFixed(1));asun.setAttribute('cy',(180-Math.sin(th)*140).toFixed(1))});
+$('#see-sun').addEventListener('click',function(){var s=spotBtns.filter(function(b){return b.getAttribute('aria-pressed')==='true'})[0];var target=s&&s.dataset.spot==='rear'?.9:.12;setTimeout(function(){animateTo(target)},RM?0:500)});
+$$('[data-goto]').forEach(function(b){b.addEventListener('click',function(){var t=+b.dataset.goto;var top=hero.getBoundingClientRect().top+scrollY+(RM?0:(hero.offsetHeight-innerHeight)*((t-.08)/.86));window.scrollTo({top:top,behavior:RM?'auto':'smooth'});setTimeout(function(){animateTo(t)},RM?0:700)})});
+
+/* ---------- gallery lightbox ---------- */
+var gal=$$('#gal button'),lb=$('#lb'),lbImg=$('#lb-img'),lbCap=$('#lb-cap'),cur=0,lastFocus=null;
+function show(i){cur=(i+gal.length)%gal.length;var im=$('img',gal[cur]);lbImg.src=im.src;lbImg.alt=im.alt;lbCap.textContent=$('figcaption',gal[cur]).textContent+'  ·  '+(cur+1)+' / '+gal.length}
+function openLb(i){lastFocus=document.activeElement;show(i);lb.hidden=false;lb.classList.add('open');document.body.style.overflow='hidden';$('#lb-x').focus()}
+function closeLb(){lb.classList.remove('open');lb.hidden=true;document.body.style.overflow='';if(lastFocus)lastFocus.focus()}
+gal.forEach(function(b,i){b.addEventListener('click',function(){openLb(i)})});
+$('#lb-x').addEventListener('click',closeLb);$('#lb-p').addEventListener('click',function(){show(cur-1)});$('#lb-n').addEventListener('click',function(){show(cur+1)});
+lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLb();else if(e.key==='ArrowRight')show(cur+1);else if(e.key==='ArrowLeft')show(cur-1);else if(e.key==='Tab'){var f=$$('.lb-btn');var i=f.indexOf(document.activeElement);e.preventDefault();f[(i+(e.shiftKey?f.length-1:1))%f.length].focus()}});
+var sx0=null;lb.addEventListener('touchstart',function(e){sx0=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',function(e){if(sx0===null)return;var dx=e.changedTouches[0].clientX-sx0;if(Math.abs(dx)>45)show(cur+(dx<0?1:-1));sx0=null});
+
+/* ---------- tap-to-load map ---------- */
+$('#showmap').addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.google.com/maps?q=Shalom+BB+Carlingford&output=embed';f.title='Map: Shalom, Ghan Road, Carlingford';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';$('#map').appendChild(f);$('#mapface').remove()});
+
+/* ---------- enquiry helper ---------- */
+var S={stay:null,room:null,month:null,guests:null},step=1;
+var steps=$$('#helper .step'),bars=$$('#helper .steps span'),next=$('#next'),back=$('#back');
+var mwrap=$('#months'),now=new Date();
+for(var m=0;m<12;m++){var d=new Date(now.getFullYear(),now.getMonth()+m,1);var lab=d.toLocaleString('en-IE',{month:'long'})+' '+d.getFullYear();var b=document.createElement('button');b.type='button';b.className='chip-b';b.dataset.m=lab;b.setAttribute('aria-pressed','false');b.textContent=lab;mwrap.appendChild(b)}
+var nb=document.createElement('button');nb.type='button';nb.className='chip-b';nb.dataset.m='';nb.setAttribute('aria-pressed','false');nb.textContent='Not sure yet';mwrap.appendChild(nb);
+function press(group,btn){$$('button',group).forEach(function(x){x.setAttribute('aria-pressed',x===btn)})}
+function valid(){if(step===1)return S.stay==='apt'||(S.stay==='bb'&&S.room!==null);if(step===2)return S.month!==null;if(step===3)return S.guests!==null;return true}
+function render(){steps.forEach(function(s){s.hidden=+s.dataset.step!==step});bars.forEach(function(b,i){b.classList.toggle('on',i<step)});back.hidden=step===1;next.hidden=step===4;next.disabled=!valid();next.textContent=step===3?'Write my email':'Next';if(step===4)compose()}
+$$('[data-stay]').forEach(function(b){b.addEventListener('click',function(){S.stay=b.dataset.stay;press(b.parentNode,b);$('#bbtype').hidden=S.stay!=='bb';if(S.stay==='apt')S.room=null;render();if(S.stay==='apt'&&!RM)setTimeout(function(){go(2)},260)})});
+$$('[data-room]').forEach(function(b){b.addEventListener('click',function(){S.room=b.dataset.room;press(b.parentNode,b);render();if(!RM)setTimeout(function(){go(2)},260)})});
+mwrap.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;S.month=b.dataset.m;press(mwrap,b);render();if(!RM)setTimeout(function(){go(3)},260)});
+$('#guests').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;S.guests=b.dataset.g;press($('#guests'),b);render()});
+function go(n){if(n>step&&!valid())return;step=n;render();var q=$('.step[data-step="'+n+'"] .q');if(q&&document.activeElement&&document.activeElement.closest&&document.activeElement.closest('#helper')){q.setAttribute('tabindex','-1');q.focus({preventScroll:true})}}
+next.addEventListener('click',function(){if(valid())go(step+1)});back.addEventListener('click',function(){go(step-1)});
+var subj='',body='';
+function compose(){
+  var what=S.stay==='apt'?'a self-catering apartment':(S.room?'a '+S.room.toLowerCase()+' B&B room':'a B&B room');
+  var short=S.stay==='apt'?'self-catering apartment':(S.room?S.room+' B&B room':'B&B room');
+  var g=S.guests==='5+'?'5 or more':S.guests;
+  subj='Enquiry: '+short+(S.month?', '+S.month:'')+' ('+g+(S.guests==='1'?' guest':' guests')+')';
+  body='Hello,\n\nI would like to ask about '+what+' at Shalom.\n\n'+
+    'Rough month: '+(S.month||'not sure yet')+'\n'+
+    'Guests: '+g+'\n\n'+
+    'Could you let me know what is available and the rate?\n\nThank you.';
+  $('#msg').innerHTML='';var to=document.createElement('span');to.className='to';to.textContent='To: '+EMAIL+'   ·   Subject: '+subj;$('#msg').appendChild(to);$('#msg').appendChild(document.createTextNode(body));
+  $('#mailgo').href='mailto:'+EMAIL+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+}
+/* prefill from explorer buttons */
+$$('[data-pre]').forEach(function(a){a.addEventListener('click',function(){var p=a.dataset.pre;var stayB=$('[data-stay="'+(p==='apt'?'apt':'bb')+'"]');S.stay=p==='apt'?'apt':'bb';press(stayB.parentNode,stayB);$('#bbtype').hidden=S.stay!=='bb';S.room=null;$$('[data-room]').forEach(function(x){x.setAttribute('aria-pressed','false')});
+  if(p==='bb-single'||p==='bb-sharing'){S.room=p==='bb-single'?'Single':'Sharing';var rb=$('[data-room="'+S.room+'"]');press(rb.parentNode,rb);step=2}else if(p==='apt'){step=2}else step=1;render()})});
+render();
+
+/* ---------- copy buttons ---------- */
+function copyText(txt,btn,label){
+  function done(){btn.dataset.done='1';btn.textContent='Copied ✓';setTimeout(function(){btn.dataset.done='';btn.textContent=label},1800)}
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(txt).then(done,fallback)}else fallback();
+  function fallback(){var ta=document.createElement('textarea');ta.value=txt;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(e){}ta.remove();done()}
+}
+$$('[data-copy]').forEach(function(b){var l=b.textContent;b.addEventListener('click',function(){copyText(b.dataset.copy,b,l)})});
+var cm=$('#copymsg');cm.addEventListener('click',function(){copyText('To: '+EMAIL+'\nSubject: '+subj+'\n\n'+body,cm,'Copy message')});
+
+/* ---------- reveals ---------- */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+$$('[data-reveal]').forEach(function(el){io.observe(el)});
+var wio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.4});wio.observe($('#walk'));
+setTimeout(function(){$$('[data-reveal]').forEach(function(el){el.classList.add('in')})},4000);
+})();
+</script>
+</body>
+</html>
